@@ -193,7 +193,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-03 16:59:43" itemprop="dateModified" datetime="2020-10-03T16:59:43+08:00">2020-10-03</time>
+                <time title="Modified: 2020-10-03 19:34:52" itemprop="dateModified" datetime="2020-10-03T19:34:52+08:00">2020-10-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -216,63 +216,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="虚数的引出"><a href="#虚数的引出" class="headerlink" title="虚数的引出"></a>虚数的引出</h2><p>让我们先来考虑以下这个方程：<br>\begin{eqnarray}<br>    x^2 = 4 \notag<br>\end{eqnarray}<br>很直接，通过对方程两边开根，可以求得它的解为 $x=2$ 或 $x=-2$。</p>
-<p>如果要更细致的探索这个方程的意义，我们可以将其改写为 $x·x·1=4$ ，它意味着我们需要求解出某种操作$x$，使其对实数 $1$ 作用两次后变为实数 $4$ 。如果利用几何的手段，将整个过程移到实轴上，那么根据之前的计算，这个变换最终就能直观的用以下两张图来表示：<br><br/><br><img src="ani_1.gif"  width="80%"  height="80%"  alt="图片"></p>
-<center>
-变换$x=2$所对应的图像
-</center>
-
-<img src="ani_2.gif"  width="80%"  height="80%"  alt="图片">
-<center>
-变换$x=-2$所对应的图像
-</center>
-<br/>
-但是如果我们需要求解以下这个方程呢？
-\begin{eqnarray}
-    x^2 = -1 \notag
-\end{eqnarray}
-如果像刚刚那样，假想整个变换都发生在实轴上，那么我们大致能判断出这个未知变换应当长这样：
-<br/>
-<img src="ani_3.gif"  width="80%"  height="80%"  alt="图片">
-<center>
-某未知变换
-</center>
-<br/>
-可是，从代数的角度来看，它却是极为不合理的。在第一步操作中，它直接把 $1$ 变成了 $0$ ，如果这仅仅意味着将 $0$ 乘以 $1$ ，那么在进行第二次变换过后，它应当仍然为 $0$ ，因为将一个实数乘以 $0$ 之后相当于直接清除这个数原本在实轴上留有的信息，我们不可能再次通过相同的变换将一个零维空间扩展到一维。但是很显然，这个亟待求解的变换在将 $x$ 变为 $0$ 后仍然保存了一定的信息，那么它究竟是什么呢？
-
-<p><br/><br/><br>说到维度，我们目前都仅仅将思维局限在了如之前图中所示的一维实轴上。但是如果我们假想这个变换是发生在一个二维平面内，那么如下图所示的这个操作便提供了一种可行的方案：</p>
-<br/>
-<img src="ani_4.gif"  width="80%"  height="80%"  alt="图片">
-<center>
-二维空间下的变换
-</center>
-<br/>
-
-<p>很显然，这个变换意味着将实数绕着原点逆时针旋转90度（顺时针旋转则为它的逆变换），在数学上，我们将这种变换定义为 $i$ （在工程学中， $j$ 这个符号更常用些）。至此，通过将视野拓展到二维平面，我们在数学上获得了一个强有力的分析工具——虚数 $i$ 。事实上，当我们站在一个更高的维度去分析低维的一些问题，这些分析工具不仅能够给我们提供一种全新的思路，在简化运算时往往也能起到意想不到的作用（比如说正弦稳态分析中的相量分析法和机器人学中的齐次坐标）。</p>
-<h2 id="从实数到复数"><a href="#从实数到复数" class="headerlink" title="从实数到复数"></a>从实数到复数</h2><p>既然已经定义了虚数 $i$ ，那我们就可以将分析对象从目前的实数域扩展到整个复数域。通常情况下，我们将形如$z=a+bi$ （$a$，$b$ 必须为实数）的数称为复数（complex number），其中 $a$ 为实部（real part）， $b$ 为虚部（imaginary part）。而在几何上，我们也可以将分析范围从实轴拓展到整个复平面，比如说，复数 $4+3i$ 在复平面中就可以这样表示：</p>
-<br/>
-<img src="plane.png"  width="80%"  height="80%"  alt="图片">
-<center>
-复平面
-</center>
-<br/>
-
-<p>从代数的角度看，复数的运算法则和实数一致，这里就列在下方，不做过多赘述。</p>
-<p>\begin{eqnarray}<br>    (a_1 + ib_1) + (a_2 + ib_2)&amp;=(a_1 + a_2) + i(b_1 + b_2) \notag \\ \notag \\<br>    (a_1 + ib_1) - (a_2 + ib_2)&amp;=(a_1 - a_2) + i(b_1 - b_2) \notag \\ \notag \\<br>    (a_1 + ib_1) \cdot (a_2 + ib_2)&amp;=(a_1a_2-b_1b_2) + i(a_1b_2+a_2b_1) \notag \\ \notag \\<br>    \frac{a_1 + ib_1}{a_2 + ib_2}&amp;=\frac{(a_1a_2+b_1b_2) + i(a_2b_1-a_1b_2)}{a_2^2 + b_2^2} \notag<br>\end{eqnarray}</p>
-<h2 id="复数的极坐标形式"><a href="#复数的极坐标形式" class="headerlink" title="复数的极坐标形式"></a>复数的极坐标形式</h2><p>对于直角坐标形式下的复数 $z=a+bi$，如果我们假设 $a=rcos\theta$，$b=rsin\theta$ （其中 $r=|z|=\sqrt{a^2+b^2}$ ，$tan\theta=\frac{b}{a}$ ），那么将其改写成 $z=r(cos\theta + i\cdot sin\theta)$ 后的表达式就为复数的极坐标形式（如果套用欧拉公式，那就是 $z=re^{i\theta}$）。</p>
-<p>如果在极坐标形式下,如果假设 $z_1 = r_1(cos\theta_1 + i\cdot sin\theta_1)$，$z_2 = r_2(cos\theta_2 + i\cdot sin\theta_2)$ ，那么当对两个复数进行乘法操作时，结果如下所示：<br>\begin{eqnarray}<br>    z_1z_2 &amp;= r_1(cos\theta_1 + i\cdot sin\theta_1) \cdot r_2(cos\theta_2 + i\cdot sin\theta_2) \notag<br>    \end{eqnarray}<br>\begin{eqnarray}<br>     = r_1r_2[cos(\theta_1+\theta2) + i \cdot sin(\theta_1+\theta2) ]\notag<br>\end{eqnarray}</p>
-<p>也就是说，这个乘法运算相当于是对 $z_2$ 同时进行了拉伸 $r_1$ 倍和旋转 $\theta_1$ $rad$ 这两种操作。我们也完全可以用一个缩放矩阵 $\textbf{S}_1 = \begin{bmatrix}<br>r_1 &amp; 0 \\ 0 &amp; r_1\end{bmatrix}$和旋转矩阵 $\textbf{R}_1 = \begin{bmatrix}<br>cos\theta_1 &amp; -sin\theta_1 \\ sin\theta_1 &amp; cos\theta_1\end{bmatrix}$来描述这种变换（抱歉，这里排版有些乱 : (，先将就着看一下吧  ）：<br>        <br/><br>\begin{eqnarray}<br>        \notag<br>        \begin{bmatrix}<br>        \textbf{Re}(z_1z_2) \\<br>        \textbf{Im}(z_1z_2)<br>        \end{bmatrix} = \textbf{S}_1\textbf{R}_1 \cdot \begin{bmatrix}<br>            \textbf{Re}(z_2) \\ \textbf{Im}(z_2) \end{bmatrix}<br>             \notag &amp;= \begin{bmatrix}<br>                r_1 &amp; 0 \\ 0 &amp; r_1<br>                \end{bmatrix}  \cdot \begin{bmatrix}<br>                cos\theta_1 &amp; -sin\theta_1 \\ sin\theta_1 &amp; cos\theta_1\end{bmatrix}<br>                \cdot \begin{bmatrix}<br>                    \textbf{Re}(z_2) \\ \textbf{Im}(z_2) \end{bmatrix} \notag<br>        \end{eqnarray}<br>        \begin{eqnarray}<br>                    = \begin{bmatrix}<br>                        \textbf{Re}(z_1) &amp; -\textbf{Im}(z_1) \\ \textbf{Im}(z_1) &amp; \textbf{Re}(z_1)\end{bmatrix}<br>                        \cdot \begin{bmatrix}<br>                            \textbf{Re}(z_2) \\ \textbf{Im}(z_2) \end{bmatrix} \notag<br>        \end{eqnarray}</p>
-<p>因此，对于任意一个复数 $z = a+bi$ ，我们都可以将它和矩阵 $\textbf{Z} = \begin{bmatrix}<br>a &amp;-b \\ b &amp; a\end{bmatrix}$所对应的变换等价。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本节中，我们讨论了复数的直角坐标形式和极坐标形式。在这里，复数是我们的<strong>研究对象</strong>，而无论是其直角坐标形式还是极坐标形式，都仅仅是它的<strong>表达方式</strong>而已。通常，随着表达方式的改变，研究对象所具有的不同性质也能够随之凸显。个人认为复数在直角坐标形式下具有更明显的代数意义，而在极坐标形式下其几何意义则显得更为直观。</p>
-<center>
-<a href="/2020/09/28/MTH101_0/" title="**回到目录**">**回到目录**</a>
-</center>
-
-<h2 id="补充资料"><a href="#补充资料" class="headerlink" title="补充资料"></a>补充资料</h2><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1fx41187tZ">【官方双语】欧拉公式与初等群论</a><br><br/><br><br/></p>
-<p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh-Hans">本博客采用 CC BY-NC-SA 4.0 进行许可</a></p>
-<!-- <iframe height=500 width=500 src="ani_1.gif">
-<iframe src="ani_1.gif" width="100%" height="300" frameborder="0" loading="lazy" allowfullscreen></iframe> -->
-
+          <p>从变换的视角看待复数</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/02/MTH101_1/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -322,7 +274,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-03 16:59:40" itemprop="dateModified" datetime="2020-10-03T16:59:40+08:00">2020-10-03</time>
+                <time title="Modified: 2020-10-03 19:33:13" itemprop="dateModified" datetime="2020-10-03T19:33:13+08:00">2020-10-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -346,35 +298,15 @@
 
       
           <h2 id="MTH101是啥？"><a href="#MTH101是啥？" class="headerlink" title="MTH101是啥？"></a>MTH101是啥？</h2><p>MTH101（课程中文名为工程数学 I，英文为Engineering Mathematics I）是西浦大二电气系的一门必修课。在这门课里，你将会学到应用在工程学中<strong>最基础</strong>的数学理论。</p>
-<h2 id="学这门课有什么用？"><a href="#学这门课有什么用？" class="headerlink" title="学这门课有什么用？"></a>学这门课有什么用？</h2><p>可以说，只要今后从事的领域和现实的物理世界有较高的关联度，那么这门课里涉及到的大部分数学理论在你的职业生涯中都将会有很多用武之地。对于电气系而言，大三的很多专业课（比如说控制理论和信号与系统）也与此课程有着极大的联系。如果没有对这门课里提到的数学概念形成清晰的理解，那么今后三年的学业生涯将会步履维艰。</p>
-<h2 id="写作本系列的目的"><a href="#写作本系列的目的" class="headerlink" title="写作本系列的目的"></a>写作本系列的目的</h2><p>虽然MTH101里的理论都是为工程学里的应用奠定数学基础，但是本课程基本都是由数学系的老师授课，而他们往往会从数学研究者的角度来讲授相关的数学原理，在这过程中难免会花大量精力对其进行大量抽象而又繁琐复杂的代数证明，而隐藏在它们背后的直观思想以及相关的工程学应用则通常会被忽略。因此在学习时，有相当多一部分人（这也包括当年的我）的水平都仅仅停留于对概念的了解，对其背后的数学/工程学思想则没有做相应的探寻。</p>
-<!-- <img src="/MTH101_0/mass.png" class="" title="mass-spring-damper system"> -->
-<p><img src="mass.png" alt="mass-spring-damper system"> </p>
-<!-- <div style="text-align: center">
-<img src = "./MTH101_0/mass.png">
-</div> -->
-
-<p>如果说仅仅是为了应付学校期末考试，那么这些浮浅的了解完全绰绰有余，因为考卷上的题目只是考察你是否掌握基本概念以及相应的数学运算能力。但是，在计算机技术如此发达的今天，数学课上学到的那些运算技巧在实际应用中完全可以被几行MATLAB代码代替。如果想发挥工程师独有的优势，我们对自己的要求就远远不能局限于对概念的了解（了解和理解完全是两码事）。举一个最简单的例子：对于如上图所示的弹簧-振子系统而言（我们之后会详细的研究这个系统），我们可以用如下的微分方程来描述</p>
-<p>\begin{eqnarray}<br>    \frac{d^2 x}{d t^2} +\frac{dx}{dt} + 4x = F(t) \notag<br>\end{eqnarray}</p>
-<p>从数学的角度而言，对于任何给定的正常输入，我们都可以套用相应的数学技巧（或者还是通过计算机运算）解出这个系统所对应的输出。但是在工程学中，我们更有可能去考虑这几个偏于实际的问题：</p>
-<ul>
-<li>这是个什么类型的系统？</li>
-<li>这个系统有什么样的动态特性？</li>
-<li>我可以用这个系统做些什么？</li>
-</ul>
-<p>如果没有形成对相关数学背景知识的直觉和自己独有的理解，仅仅掌握微分方程的求解技巧对于回答这些问题来说于事无补，而将理论运用到实际的工程中则更是天方夜谭（况且这还仅仅是对现成的系统进行分析，如果今后是要根据需求自己设计类似的系统，你还需要对它们形成更为深入的理解）。</p>
-<p>一般在不理解概念的情况下，对公式的应用只能通过死记硬背来熟悉，这种学习方式不仅枯燥乏味，效率往往也是极低的。因此，本系列中，我将会尝试用一些直观的方式对MTH101里面所涉及的知识点进行阐述，帮助大家建立起一个工程师所应具备的数学直觉。</p>
-<h2 id="给读者的提示"><a href="#给读者的提示" class="headerlink" title="给读者的提示"></a>给读者的提示</h2><p>这个系列的博文也许会使你避免在学习时绕过多的弯路，但是千万别认为阅读这些文章可以帮助你减少在这门课程上所花的时间。能力的培养是一个长期的过程，如果想成为一名优秀的工程师，你势必将会比别人投入更多精力去探寻这些数学概念的本质以及思考它们之间的内在联系，为今后的职业生涯打下坚实的基础。</p>
-<h2 id="相关课本"><a href="#相关课本" class="headerlink" title="相关课本"></a>相关课本</h2><p>课本就是学校发的教材，点击<a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1j7Fwgc-yHob_LivUjUu6b1aHNTSGWJiu/view?usp=sharing">这里</a>可以下载我存放在谷歌网盘的电子版本。</p>
-<h2 id="所需的预备知识"><a href="#所需的预备知识" class="headerlink" title="所需的预备知识"></a>所需的预备知识</h2><p>阅读这个系列的文章需要你具备一定的多元微积分和线性代数的基础（如果你觉得自己对线性代数的概念还不够熟悉的话，请先看完<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ys411k7yQ?from=search&seid=2415493887753205299">这套视频</a>）。</p>
-<h2 id="本系列的目录"><a href="#本系列的目录" class="headerlink" title="本系列的目录"></a>本系列的目录</h2><ol>
-<li><a href="/2020/10/02/MTH101_1/" title="认识复数">认识复数</a></li>
-<li>(未完待续)</li>
-</ol>
-<br/>
-
-<p><a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh-Hans">本博客采用 CC BY-NC-SA 4.0 进行许可</a></p>
-
+<h2 id="学这门课有什么用？"><a href="#学这门课有什么用？" class="headerlink" title="学这门课有什么用？"></a>学这门课有什么用？</h2><p>可以说，只要今后从事的领域和现实的物理世界有较高的关联度，那么这门课里涉及到的大部分数学理论在你的职业生涯中都将会有很多用武之地。对于电气系而言，大三的很多专业课（比如说控制理论和信号与系统）也与此课程有着极大的联系。如果没有对这门课里提到的数学概念形成<strong>清晰</strong>的理解和思路，那么今后三年的学业生涯将会步履维艰。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/09/28/MTH101_0/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
